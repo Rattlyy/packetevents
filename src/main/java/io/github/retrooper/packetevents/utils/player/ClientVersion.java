@@ -113,4 +113,8 @@ public enum ClientVersion {
     public boolean equals(ClientVersion target) {
         return protocolVersion == target.getProtocolVersion();
     }
+    
+    public String getHumanName(ClientVersion ver) {
+        return ver.name().replaceAll("v_", "").replaceAll("_", ".");
+    }
 }
